@@ -2,5 +2,20 @@ package school.mjc.stage0.loops.task2;
 
 public class PrimeNumbers {
     public void printPrimeNumbers(int printToInclusive) {
+        int number = 2;
+        while (number <= printToInclusive){
+            boolean isPrime = true;
+            int divisor = 2;
+            while (divisor * divisor <= number && isPrime){
+                if (number % divisor == 0)  {
+                    isPrime = false;
+                }
+                divisor++;
+            }
+            if(isPrime) {
+                System.out.println(number);
+            }
+            number++;
+        }
     }
 }
